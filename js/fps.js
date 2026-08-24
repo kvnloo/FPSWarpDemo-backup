@@ -1805,6 +1805,7 @@ function animate() {
             if(destroyed){
               makeExplodeSound();
               if(referenceTarget) {     // Reference target destroyed, spawn first target(s)
+                referenceTarget = false;
                 while(targets.length < config.targets.count) { spawnTarget(); }
               }
               else {
